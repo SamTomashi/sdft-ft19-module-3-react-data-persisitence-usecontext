@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Laptop",
-      "price": "85000",
+      "price": "850000",
       "description": "HP laptop with 16GB RAM and 512GB SSD",
       "vat": 16,
       "imageUrl": "https://picsum.photos/seed/laptop/400/300"

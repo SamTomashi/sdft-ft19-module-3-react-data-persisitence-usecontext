@@ -67,6 +67,7 @@ export default function Card({ product }) {
               type="number"
               value={price}
               onChange={(event) => setPrice(event.target.value)}
+              className="form-control form-control-sm"
             />
           </div>
 
@@ -76,15 +77,15 @@ export default function Card({ product }) {
             }}
             className="btn btn-sm btn-danger m-1"
           >
-            DELETE
+            <i className="bi bi-trash"></i>
           </button>
           <button
             onClick={() => {
-              updateProduct(product.id, {price: price});
+              updateProduct(product.id, { price: price });
             }}
             className="btn btn-sm btn-success m-1"
           >
-            UPDATE
+            <i className="bi bi-pencil"></i>
           </button>
         </div>
       </div>
