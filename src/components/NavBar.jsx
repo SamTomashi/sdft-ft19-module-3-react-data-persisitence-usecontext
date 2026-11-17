@@ -1,25 +1,30 @@
-import { useContext } from "react"
-import { UserContext } from "../contexts/UserContext"
+import { Link } from "react-router";
 
 export default function NavBar() {
 
-    const user = useContext(UserContext)
     
     return (
-      <nav className="navbar bg-body-tertiary sticky-top">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            {/* <img
-              src="./assets/hero.png"
-              alt="Logo"
-              width="30"
-              height="24"
-              className="d-inline-block align-text-top"
-            /> */}
-            {user.username}
+            Navbar
           </a>
+
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav">
+              <Link className="nav-link active" aria-current="page" to={"/"}>
+                Home
+              </Link>
+
+              <Link className="nav-link" to={"/products"}>
+                Products
+              </Link>
+              <Link className="nav-link" to={"/dashboard"}>
+                Dashboard
+              </Link>
+            </div>
+          </div>
         </div>
-        
       </nav>
     );
 }

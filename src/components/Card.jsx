@@ -87,6 +87,10 @@ export default function Card({ product }) {
           >
             <i className="bi bi-pencil"></i>
           </button>
+
+          <a className="btn btn-sm btn-success" href={`/products/${product.id}`}>
+            View
+          </a>
         </div>
       </div>
     );

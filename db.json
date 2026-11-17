@@ -11,7 +11,7 @@
     {
       "id": "2",
       "name": "Smartphone",
-      "price": "60000",
+      "price": "70000",
       "description": "Samsung smartphone with 128GB storage",
       "vat": 16,
       "imageUrl": "https://picsum.photos/seed/smartphone/400/300"
@@ -19,7 +19,7 @@
     {
       "id": "3",
       "name": "Wireless Mouse",
-      "price": 1500,
+      "price": "1500999",
       "description": "Ergonomic wireless optical mouse",
       "vat": 16,
       "imageUrl": "https://picsum.photos/seed/mouse/400/300"
@@ -67,7 +67,7 @@
     {
       "id": "9",
       "name": "Headphones",
-      "price": 3500,
+      "price": "1000000",
       "description": "Over-ear stereo headphones",
       "vat": 16,
       "imageUrl": "https://picsum.photos/seed/headphones/400/300"
