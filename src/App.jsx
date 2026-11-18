@@ -1,25 +1,19 @@
-import { useEffect, useState } from "react";
-import { ProductContext } from "./contexts/ProductContext";
+// import { useEffect, useState } from "react";
+import { ProductProvider } from "./contexts/ProductContext";
 import NavBar from "./components/NavBar";
 import AppRoutes from "./routes/routes";
+// import useFetchData from "./hooks/useFetchData";
+// import useFetchData from "./hooks/useFetchData";
 
 
 function App() {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:4000/products")
-      .then((response) => response.json())
-      .then((data) => {
-        setProducts(data);
-      });
-  }, []);
+  
 
   return (
-    <ProductContext.Provider value={{ products, setProducts }}>
+      <ProductProvider>
       <NavBar />
       <AppRoutes />
-    </ProductContext.Provider>
+    </ProductProvider>
   );
 }
 

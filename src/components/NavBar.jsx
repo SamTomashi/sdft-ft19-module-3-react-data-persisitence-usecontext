@@ -1,8 +1,9 @@
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 
 export default function NavBar() {
 
-    
+  const links = ["Home", "Products", "Dashboard"]
+  
     return (
       <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div className="container-fluid">
@@ -11,17 +12,14 @@ export default function NavBar() {
           </a>
 
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <Link className="nav-link active" aria-current="page" to={"/"}>
-                Home
-              </Link>
-
-              <Link className="nav-link" to={"/products"}>
-                Products
-              </Link>
-              <Link className="nav-link" to={"/dashboard"}>
-                Dashboard
-              </Link>
+            <div className="navbar-nav nav-underline">
+              {links.map((link) => (
+                <NavLink key={link} className={({isActive})=> isActive? "nav-link active":"nav-link"}
+                  aria-current="page"
+                  to={link === 'Home'? '/': link}>
+                  {link}
+                </NavLink>
+              ))}
             </div>
           </div>
         </div>
