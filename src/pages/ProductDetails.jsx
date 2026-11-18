@@ -17,7 +17,6 @@ export default function ProductDetails() {
     
     return (
         <>
-            {id}
             <ul>
                 <li>{product.name}</li>
                 <li>{product.price}</li>

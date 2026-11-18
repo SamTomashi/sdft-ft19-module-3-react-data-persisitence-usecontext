@@ -1,10 +1,10 @@
-import { useContext, useState } from "react";
+import {  useState } from "react";
 import Badge from "./Badge";
-import { ProductContext } from "../contexts/ProductContext";
+import {  useProducts } from "../contexts/ProductContext";
 
 export default function Card({ product }) {
 
-  const {products, setProducts} = useContext(ProductContext);
+  const {products, setProducts} = useProducts()
   
   function deleteProduct(id) {
     fetch(`http://localhost:4000/products/${id}`, {
